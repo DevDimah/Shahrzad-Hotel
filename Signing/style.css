@@ -1,0 +1,287 @@
+
+:root{
+  --Primary-orange:#5D3C37;
+  --blue:#5f7143;
+  --secondary-orange:#9a694d;
+  --beige:#F1E8DC;
+}
+body {
+  font-family: "Amiri", serif;
+  background-color: #ffffff;
+  font-size: 1rem;
+  background: white;
+ }
+ html, body {
+    overflow-x: hidden;
+}
+
+p {
+  color: #b3b3b3;
+  font-weight: 300; }
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease; }
+  a:hover {
+    text-decoration: none !important; }
+
+.inactive-form { display: none; }
+.active-form { display: block; }
+.half { 
+  display: flex; 
+  height: 100vh;  
+  position: relative; 
+}
+.contents { 
+  padding: 16px;
+  width: 100%;  
+  height: auto;
+}
+.bg { 
+  width: 50%; 
+}
+
+h3{
+  font-weight: 600;
+  color: var(--Primary-orange); 
+}
+h2 {
+  font-size: 2rem !important;
+  font-weight: 600;
+   background: #9a694d0c;
+  color: var(--Primary-orange);
+ }
+
+.half, .half .container > .row {
+  height: 100vh;
+  min-height: 700px; 
+}
+
+@media (max-width: 991.98px) {
+  .half .bg {
+    height: 200px; } }
+
+.half .contents {
+  background: #fff; }
+
+.half .contents, .half .bg {
+  width: 50%;}
+  @media (max-width: 1199.98px) {
+    .half .contents, .half .bg {
+      width: 100%; } }
+  .half .contents .form-control, .half .bg .form-control {
+    border: none;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 1rem;
+    height: 56px;
+    background: #fff;
+    font-size: 1.1rem; }
+    .half .contents .form-control:active, .half .contents .form-control:focus, .half .bg .form-control:active, .half .bg .form-control:focus {
+      outline: none;
+      -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
+
+.half .bg {
+  background-image: url('../Images/خلفية\ تسجيل\ الدخول\ مع\ خط\ جانبي.png');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  transition: all 0.7s ease-in-out;
+  z-index: 1;
+  }
+
+
+.half {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/*.bg {
+  background-image: url('/Images/side-bg-orange.svg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  transition: all 0.7s ease-in-out;
+  z-index: 1;
+}*/
+
+.contents {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  padding: 50px;
+  background-color: white;
+  transition: all 0.7s ease-in-out;
+  z-index: 2;
+}
+
+select.form-control {
+  color: #6c757d;
+  opacity: 1; 
+}
+
+.terms{
+  direction: rtl !important;
+  font-size: 1rem;
+  display: flex;
+  padding: 1rem 0;
+}
+
+.form-check-label{
+  margin-right:1.9rem;
+}
+label{
+  color: #6c757d;
+  font-size: 1rem; 
+}
+.inactive-form {
+  display: none;
+}
+
+.active-form {
+  display: block;
+}
+
+.slide .bg {
+  transform: translateX(100%);
+}
+
+.slide .contents {
+  transform: translateX(-100%);
+}
+
+/**/
+#registerForm .form-control {
+  height: 44px !important;
+  font-size: 0.9rem;
+}
+#registerForm .half, .half .container > .row {
+  height: 100vh;
+  min-height: 800px;
+  margin-top: -2.8rem;
+}
+
+
+/* Ensure the slide effect works on smaller screens */
+@media (max-width: 768px) {
+  .half .bg, .half .contents {
+    width: 100%;
+  }
+
+  /* Remove translateX when the screen is smaller */
+  .slide .bg {
+    transform: translateX(0);
+  }
+
+  .slide .contents {
+    transform: translateX(0);
+  }
+
+}
+
+
+#alert-box {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+}
+
+.forgot-pass{
+  color: #6c757d;
+  transition: 0.3s;
+}
+.forgot-pass:hover{
+text-decoration: underline !important;
+color: #6c757d;
+}
+
+.login-btn, .reg-btn{
+  background:var(--blue);
+  padding: 0.8rem 3rem;
+  font-size: 1rem;
+  border: none;
+  width: 100%;
+  }
+
+.login-btn:hover,
+.reg-btn:hover{
+  background:var(--Primary-orange);
+}
+
+.btn-primary:focus {
+  border-color: var(--Primary-orange);
+  box-shadow: 0 0 0 0.2rem rgba(172, 71, 20, 0.25);
+}
+
+/* Remove or change the blue focus outline from buttons */
+.btn-primary:focus, .btn-primary:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Customize the button active/focus state */
+.btn-primary:focus, .btn-primary:active {
+  background-color: var(--Primary-orange);
+  border-color: var(--Primary-orange);
+  box-shadow: 0 0 0 0.2rem rgba(172, 71, 20, 0.25);
+}
+
+
+
+/*__________________ validation page___________________________*/
+body.validation{
+  background: var(--beige);
+}
+.validation .main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  padding: 0 20px;
+  text-align: center;
+  background: #e7ded286;
+}
+.validation .navbar-brand img {
+  height: 80px;
+}
+.validation input[type="text"] {
+  max-width: 350px;
+  margin-top: 20px;
+  padding: 10px;  
+  transition: border-color 0.3s ease;
+}
+.validation input[type="text"]:focus {
+  border-color: rgba(128, 128, 128, 0.519); 
+  outline: none; /* Remove the default blue outline */
+  box-shadow: 0 0 5px rgba(112, 112, 112, 0.199);
+}
+.validation .send-btn {
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: var(--Primary-orange);
+  color: white;
+  padding: 0.4rem 2rem !important; 
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+.send-btn:hover {
+  background-color: #ac4714d4;
+}
+@media (max-width: 768px) {
+  .validation .navbar{
+   padding: 0.4rem !important ;
+ }
+}

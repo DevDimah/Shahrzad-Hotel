@@ -1,0 +1,306 @@
+@font-face{
+    font-family: effra;
+    src: url(/font/);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+
+}
+:root{
+    --Primary-orange:#AC4714;
+    --blue:#2F4556;
+    --secondary-orange:#C98457;
+    --beige:#F1E8DC;
+    --big-font:6rem;
+    --h2-font:3rem;
+    --p-font: 1.1rem;
+}
+body{
+    background-color: var(--beige) !important;
+    overflow-x: hidden !important;
+    height: 100%;
+    margin: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.nav-section{
+ position: relative;
+}
+.navbar{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.nav-link{
+    font-size: 1.3rem;
+    color: var(--secondary-orange) !important;
+}
+ .page-title{
+    color: var(--Primary-orange) !important;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+/*___ Navbar ___*/
+nav{
+    background-color: var(--beige) !important;
+    padding: 0rem 6rem;
+    border-bottom: 0px solid var(--secondary-orange);
+}
+ .social-nav i{
+    font-size: 1.3rem;
+    background-color: var(--secondary-orange);
+    padding: 0.4rem 0.5rem;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+ .social-nav i:hover{
+    transform: translateY(-8px);
+    background-color: var(--Primary-orange);
+}
+  .social-nav span{
+    font-size: 1rem;
+    color: var(--secondary-orange);
+}
+ nav .logo img{
+    height: 90px !important;
+}
+
+/*======================================================================*/
+
+
+.nav-tabs .nav-link{
+    font-size: 1.4rem !important;
+    background: white !important;
+    border: 2px solid var(--Primary-orange) !important;
+    color: var(--Primary-orange) !important;
+}
+.nav-tabs .nav-link.active{
+    background: var(--Primary-orange) !important;
+    color: white !important;
+}
+#active-orders-tab{
+  border-radius:  0 8px 8px 0;
+}
+#personal-info-tab{
+    border-radius: 0 !important;
+    margin: 0 -2px;
+}
+#previous-orders-tab{
+ border-radius:   8px 0  0 8px;
+}
+
+/*____ orders ____*/
+.card{
+    border-radius: 8px !important;
+}
+.order-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.order-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.order-info p{
+    color: grey;
+}
+
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: flex-end; 
+    padding: 0;
+    margin-top: auto;
+    text-align: center;
+}
+ .order-actions a {
+    text-decoration: none;
+    color: var(--blue);
+}
+.view-order-details{
+    background: white;
+    color: var(--secondary-orange) !important;
+    border-radius: 8px;
+    padding: 0.4rem 1.4rem;
+    border: 2px solid var(--secondary-orange);
+}
+
+
+ .order-info p {
+    margin-bottom: 0.5rem;
+    line-height: 0.8;
+}
+.order-details-modal{
+    line-height: 0.8;
+}
+
+.modal{
+    z-index: 2000 !important;
+}
+
+/*tap 2*/
+input[readonly] {
+    outline: none !important;     
+    box-shadow: none !important;
+    border-color: #ced4da !important;
+}
+
+input[readonly]:focus,
+input[readonly]:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.form-control{
+    background: #61616109 !important;
+}
+/*outline*/
+form input:focus, 
+form button:focus, 
+.modal-content input:focus, 
+.modal-content button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.modal-content button.btn-primary {
+    background-color: var(--blue); 
+    color: #fff; 
+    border: none;
+}
+
+.modal-content button.btn-primary:hover {
+    background-color: #555;
+}
+
+.modal-content input.form-control {
+    border: 1px solid #ccc; 
+    box-shadow: none !important;
+}
+.modal-content input.form-control,
+.modal-content select.form-select,
+.modal-content textarea.form-control {
+    border: 1px solid #ccc;
+    box-shadow: none !important;
+}
+
+.modal-content input.form-control:focus,
+.modal-content select.form-select:focus,
+.modal-content textarea.form-control:focus {
+    border-color: #63626288;
+    box-shadow: none !important;
+}
+/*Modals*/
+.modal-content input.form-control:focus {
+    border-color: #636262; 
+    box-shadow: none !important;
+}
+.modal-header {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header .modal-title {
+    flex-grow: 1;
+    text-align: center; 
+    margin: 0;
+}
+
+.modal-header .btn-close {
+    margin: 0;
+}
+.cancel-terms p{
+    color: rgb(153, 3, 3);
+}
+
+
+/*tap 3 */
+.evaluation-btn{
+    background: #efb619;
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: rgb(0, 0, 0) !important;
+    transition: 0.3s;
+}
+.evaluation-btn:hover{
+    background: #f0ca5f;
+
+}
+/*====================================================================*/
+
+
+
+@media screen and (max-width: 870px) {
+     nav{
+        padding: 2rem 0rem;
+    }
+     .social-nav i{
+        font-size: 0.9rem;
+        padding: 0.3rem 0.4rem;
+    }
+     .social-nav span{
+        font-size: 0.8rem;
+   }
+    nav .logo img{
+       height: 65px !important;
+   }
+    .page-title h1{
+    font-size: 2rem;
+   }
+   
+    .nav-tabs .nav-link{
+        font-size: 1rem !important;
+    }
+    .view-order-details, .evaluation-btn{
+        padding: 0.3rem 0.5rem;
+        font-size: 0.6rem;
+    }
+
+}
+@media screen and (max-width: 800px) {
+    nav{
+       padding: 2rem 0rem;
+   }
+    .social-nav i{
+       font-size: 0.9rem !important;
+       padding: 0.3rem 0.4rem !important;
+   }
+    .social-nav span{
+       font-size: 0.7rem !important;
+  }
+   nav .logo img{
+      height: 60px !important;
+  }
+   .page-title h1{
+   font-size: 1.3rem !important;
+  }
+  
+   .nav-tabs .nav-link{
+       font-size: 0.7rem !important;
+   }
+}

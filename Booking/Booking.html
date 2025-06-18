@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">  
+  <title>Booking | الحجز</title>
+</head>
+<body>
+ <!--================== Header ==========================-->
+
+ <nav class="navbar navbar-expand-lg navbar-light mx-auto px-5 py-4">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="../index.html" class="navbar-brand flex-grow-1" style="height: 100px;"><img src="../Images/sh-brown-logo.png" alt="ramlah-logo" class="img-fluid"></a>
+        </div>
+
+            <!-- Navbar button -->
+            <div class="navbar-nav mr-auto">
+            <div class="navbar-nav nav-btn">
+                <a href="../Signing/signin.html" class="nav-item nav-link nav-btn-item login-btn">دخـــــول</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--====================================================================================-->
+<div class="container Booking-form">
+    <h2 class="d-flex">نــمــــوذج حــجــز
+       <div class="package-name px-2">
+        الباقة الملكية
+       </div>
+    </h2>
+
+     <!-- Reservation Confirmation Section -->
+     <div class="reservation-for my-4 col-8">
+      <h4>هل تقوم بالحجز لنفسك أو لشخص آخر؟</h4>
+      <div class="form-check col-lg-2  col-sm-4">
+          <input class="form-check-input" type="radio" name="reservationFor" id="reservationSelf" value="self" checked>
+          <label class="form-check-label" for="reservationSelf">أحجز لنفسي</label>
+      </div>
+      <div class="form-check col-lg-2 col-sm-4">
+          <input class="form-check-input" type="radio" name="reservationFor" id="reservationOther" value="other">
+          <label class="form-check-label" for="reservationOther">أحجز لشخص آخر</label>
+      </div>
+  </div>
+
+ <!-- Booking for Self Form -->
+<form class="row g-3" id="selfBookingForm">
+  <h4 class="basic-info-form">المعلومــات الأســاسيـــة</h4>
+  <div class="col-md-4">
+      <label for="firstname" class="form-label">الاسم الاول</label>
+      <input type="text" class="form-control" id="firstname" placeholder="أدخل الاسم الأول">
+  </div>
+  <div class="col-md-4">
+      <label for="middlename" class="form-label">الاسم الثاني</label>
+      <input type="text" class="form-control" id="middlename" placeholder="أدخل الاسم الثاني">
+  </div>
+  <div class="col-md-4">
+      <label for="lastname" class="form-label">الاسم الاخير</label>
+      <input type="text" class="form-control" id="lastname" placeholder="أدخل الاسم الأخير">
+  </div>
+  <div class="col-md-4">
+      <label for="main-phone-num" class="form-label">رقم الجوال</label>
+      <input type="text" class="form-control" id="main-phone-num" placeholder="أدخل رقم الجوال">
+  </div>
+  <div class="col-md-4">
+      <label for="main-email" class="form-label">البريد الالكتروني</label>
+      <input type="email" class="form-control" id="main-email" placeholder="أدخل البريد الالكتروني">
+  </div>
+  <div class="col-md-4">
+      <label for="emergency-num" class="form-label">رقم جوال للطوارئ</label>
+      <input type="text" class="form-control" id="emergency-num" placeholder="أدخل رقم جوال للطوارئ">
+  </div>
+
+  <!-- Nationality Selection -->
+  <div class="col-md-4">
+      <label for="nationality" class="form-label">الجنسية</label>
+      <select class="form-select" id="nationality">
+          <option value="" disabled selected>اختر الجنسية</option>
+          <option value="saudi">سعودي</option>
+          <option value="visitor">غير سعودي زائر</option>
+          <option value="resident">غير سعودي مقيم</option>
+      </select>
+  </div>
+
+  <!-- Additional Fields for Nationality -->
+  <div class="col-md-4" id="nationalIDField" style="display: none;">
+      <label for="nationalID" class="form-label">رقم الهوية الوطنية</label>
+      <input type="text" class="form-control" id="nationalID" placeholder="أدخل رقم الهوية الوطنية">
+  </div>
+  <div class="col-md-4" id="residencyIDField" style="display: none;">
+      <label for="residencyID" class="form-label">رقم الإقامة</label>
+      <input type="text" class="form-control" id="residencyID" placeholder="أدخل رقم الإقامة">
+  </div>
+  <div class="col-md-4" id="visaField" style="display: none;">
+      <label for="visaNumber" class="form-label">رقم التأشيرة الإلكترونية</label>
+      <input type="text" class="form-control" id="visaNumber" placeholder="أدخل رقم التأشيرة الإلكترونية">
+  </div>
+</form>
+
+
+<!-- Booking for Another Person Form -->
+<form class="row g-3" id="otherBookingForm" style="display: none;">
+  <h4 class="basic-info-form">معلومات الشخص الآخر</h4>
+  <div class="col-md-4">
+      <label for="otherFirstName" class="form-label">الاسم الاول</label>
+      <input type="text" class="form-control" id="otherFirstName" placeholder="أدخل الاسم الأول للشخص الآخر">
+  </div>
+  <div class="col-md-4">
+      <label for="otherMiddleName" class="form-label">الاسم الثاني</label>
+      <input type="text" class="form-control" id="otherMiddleName" placeholder="أدخل الاسم الثاني للشخص الآخر">
+  </div>
+  <div class="col-md-4">
+      <label for="otherLastName" class="form-label">الاسم الاخير</label>
+      <input type="text" class="form-control" id="otherLastName" placeholder="أدخل الاسم الأخير للشخص الآخر">
+  </div>
+  <div class="col-md-4">
+      <label for="otherPhoneNum" class="form-label">رقم الجوال</label>
+      <input type="text" class="form-control" id="otherPhoneNum" placeholder="أدخل رقم الجوال للشخص الآخر">
+  </div>
+  <div class="col-md-4">
+      <label for="otherEmail" class="form-label">البريد الالكتروني</label>
+      <input type="email" class="form-control" id="otherEmail" placeholder="أدخل البريد الالكتروني للشخص الآخر">
+  </div>
+  <div class="col-md-4">
+      <label for="otherEmergencyNum" class="form-label">رقم جوال للطوارئ</label>
+      <input type="text" class="form-control" id="otherEmergencyNum" placeholder="أدخل رقم جوال للطوارئ للشخص الآخر">
+  </div>
+
+  
+    <!-- Nationality Selection -->
+    <div class="col-md-4">
+      <label for="otherNationality" class="form-label">الجنسية</label>
+      <select class="form-select" id="otherNationality">
+          <option value="" disabled selected>اختر الجنسية</option>
+          <option value="saudi">سعودي</option>
+          <option value="visitor">غير سعودي زائر</option>
+          <option value="resident">غير سعودي مقيم</option>
+      </select>
+    </div>
+
+    <!-- Additional Fields for Nationality -->
+    <div class="col-md-4" id="otherNationalIDField" style="display: none;">
+      <label for="otherNationalID" class="form-label">رقم الهوية الوطنية</label>
+      <input type="text" class="form-control" id="otherNationalID" placeholder="أدخل رقم الهوية الوطنية">
+    </div>
+    <div class="col-md-4" id="otherResidencyIDField" style="display: none;">
+      <label for="otherResidencyID" class="form-label">رقم الإقامة</label>
+      <input type="text" class="form-control" id="otherResidencyID" placeholder="أدخل رقم الإقامة">
+    </div>
+    <div class="col-md-4" id="otherVisaField" style="display: none;">
+      <label for="otherVisaNumber" class="form-label">رقم التأشيرة الإلكترونية</label>
+      <input type="text" class="form-control" id="otherVisaNumber" placeholder="أدخل رقم التأشيرة الإلكترونية">
+    </div>
+
+</form>
+
+
+
+    <!--------------------->
+    <form class="row g-3">
+      <div class="package-form row">
+          <h4>معلومــات الحـجـــز</h4>
+  
+          <div class="col-md-6">
+              <label for="choosedate" class="form-label">موعد الزيارة</label>
+              <select id="choosedate" class="form-select" dir="ltr">
+                <option value="" disabled selected >اختر موعد الزيارة</option>
+                  <option>3 Mar 2024 - 13 Mar 2024</option>
+                  <option>1 Apr 2024 - 10 April 2024</option>
+                  <option>5 Apr 2024 - 15 April 2024</option>
+                  <option>1 May 2024 - 10 May 2024</option>
+              </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="arrivalDate" class="form-label">تاريخ الوصول</label>
+            <input type="date" class="form-control" id="arrivalDate" placeholder="أدخل تاريخ الوصول" required>
+        </div>
+
+          <div class="col-md-6">
+            <label for="arrivalTime" class="form-label">وقت الوصول التقريبي لمدينة حائل</label>
+            <input type="time" class="form-control" id="arrivalTime" placeholder="موعد الوصول التقريبي لمدينة حائل">
+        </div>
+
+          <div class="col-md-6">
+              <label for="companion" class="form-label"> عدد المرافقين 
+               <span class="companion-discount">(خصم 10% لكل مرافق)</span> 
+            </label>
+              <input type="number" class="form-control col-md-12 " id="companion" value="0" step="1" min="0" max="150">
+          </div>
+    
+          
+          <div class="companions" style="display: none;">
+              <div class="companion-info row">
+                  <!-- Companion info fields will be dynamically added here -->
+              </div>
+          </div>
+      </div>
+  </form>
+  
+
+<!------------>
+    <div class="payment-section container-fluid">
+        <h4>ملخص الحجز</h4>
+        <div class="container-fluid d-flex justify-content-center mt-5 mb-5 payment-form">
+            <div class="row g-3">
+              <div class="col-md-10 mx-auto">
+                  <div class="card">
+                    <div class="d-flex justify-content-between p-3 flex-column">
+                           <!--Price-->
+                        <div class="mb-5">
+                            <h4 class="main-price py-3">السعر الكلي : <span class="price">10,000 SR</span></h4>
+                         </div>
+                         <!--coupon section-->
+                      <div class="d-flex flex-column col-md-10 col-sm-4 coupon-section mb-4">
+                        <label for="coupon" class="form-label py-2"> عندك كود خصم؟</label>
+                        <div class="d-flex ">
+                            <input type="text" class="form-control col-md-8 " id="coupon">
+                            <a href="#" class="apply-code-btn col-md-2 col-sm-2">تطبيق </a>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <hr class="mt-0 line ">
+
+
+
+                    <div class="p-3">
+                      <div class="d-flex justify-content-between mb-2 discount-amount py-2">
+                        <span>مقدار الخصم</span>
+                        <span class="diccount-price">-400 SR</span>
+                      </div>
+                    </div>
+
+
+                    <hr class="mt-0 line">
+
+
+                    <div class="p-3">
+                        <div class="d-flex justify-content-between price-after-discount">
+                          <span class="price-after-dicount">السعر بعد الخصم <i class="fa-solid fa-ticket px-2"></i></span>
+                          <span class="final-price">9,600 SR</span>
+                        </div>
+                      </div>
+
+
+                    <!--<div class="p-3">
+                        <button class="btn btn-primary btn-block free-button">Try it free for 30 days</button> 
+                        <div class="text-center">
+                        <a href="#">Have a promo code?</a>
+                        </div>
+                    </div>-->
+
+                  </div>
+              </div>
+
+              <!------------------------------------------------------------------------>
+              <div class="col-md-10 payment px-5">  
+                <h2 class="my-4">طريقة الدفــع</h2>
+                <div class="card container-fluid">
+                    <div class="row mb-2">
+            
+                        <!-- Right Side: Credit Card -->
+                        <div class="col-md-8">
+                            <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+                            <label for="creditCard" >البطاقة الائتمانية Credit Card 
+                                <i class="fa-regular fa-credit-card"></i>
+                            </label>
+                            
+                            <!-- Credit Card Form (Initially Hidden) -->
+                            <div class="card credit-card-section" id="creditCardForm" style="display: none;">
+                                <div class="card-body">
+                                    <span class="card-text">Card Holder Name</span>
+                                    <div class="input">
+                                        <input type="text" class="form-control" id="cardHolderName" placeholder="Enter Card Holder Name" maxlength="50">
+                                    </div>
+                                    <span class="card-text">Card Number</span>
+                                    <div class="input">
+                                        <i class="fa fa-credit-card"></i>
+                                        <input type="text" class="form-control" placeholder="0000 0000 0000 0000" id="cardNumber" maxlength="16">
+                                    </div>
+                                    <div class="row mt-3 mb-3">
+                                        <div class="col-md-6">
+                                            <span class="card-text">Expiry Date</span>
+                                            <div class="input">
+                                                <i class="fa fa-calendar"></i>
+                                                <input type="text" id="expirationDate" class="form-control" placeholder="MM/YY" maxlength="5">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <span class="card-text">CVC/CVV</span>
+                                            <div class="input">
+                                                <i class="fa fa-lock"></i>
+                                                <input type="text" class="form-control" id="cvc" placeholder="CVC" maxlength="3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <!-- Left Side: Apple Pay -->
+                            <div class="col-md-6 mb-4">
+                                <div>
+                                    <input type="radio" id="applePay" name="paymentMethod" value="applePay" checked>
+                                    <label for="applePay" class="applePay-label">ابل باي
+                                        Apple Pay  
+                                        <i class="fa-brands fa-cc-apple-pay px-2"></i>
+                                    </label>
+                                </div>
+                                <!-- Button for Apple Pay (Hidden initially) -->
+                            </div>
+                    </div>
+                </div>
+            </div><!--payment section ends-->
+            
+            </div>
+          </div>
+
+    </div>
+       <!-- Checkbox for Terms and Conditions -->
+       <div class="mt-5 mx-auto col-md-10 terms">
+          <input type="checkbox" id="termsCheckbox">
+          <label for="termsCheckbox">قرأت  <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">الشروط والأحكام</a> وأوافق عليها</label>
+      </div>
+      <!-- Terms and Conditions Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title" id="termsModalLabel">الشروط والأحكام</h4>
+              </div>
+              <div class="modal-body">
+                  <!-- Add your terms and conditions content here -->
+                  <h4>عن مشروع فندق شهرزاد</h4>
+                  <p>
+                    تم تصميم وتطوير هذا الموقع كواجهة إلكترونية تجريبية لفندق يحمل اسم "فندق شهرزاد"، وذلك لأغراض العرض في ملف أعمالي كمصممة ومبرمجة واجهات أمامية (Front-End Developer).<br><br>
+                    
+                    جميع عناصر التصميم مثل تنسيق الصفحات، الزخارف، توزيع المحتوى، واستخدام الألوان والخطوط تم تنفيذها بالكامل من قبلي. أما الصور والشعار فقد تم استخدامها لأغراض عرض الفكرة فقط وهي ليست من تصميمي.<br><br>
+                    
+                    تم تنفيذ تصميم الموقع بطابع تراثي يعكس أجواء الضيافة العربية الأصيلة، مع التركيز على التفاصيل الجمالية المستوحاة من الهوية الثقافية، وذلك باستخدام تقنيات HTML، CSS، JavaScript، وBootstrap.
+                </p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Confirm Button -->
+    <div class="mx-auto d-flex justify-content-center align-items-center">
+      <button type="submit" id="confirmBookingBtn" class="btn confirm-btn">إتمام الدفع وتأكيد الحجز</button>      
+    </div>
+
+
+</div>
+<!--
+<div class="container box">
+    <h2 class="fw-bold box-title">  الدفـــع </h2>
+    <hr>
+    <br>
+    <div class="price-box text-center">
+        <p>السعر كاملا :</p>
+        <h1 class=" price">  5,500 ريال</h1>
+    </div>
+    <div class="container-fluid" dir="ltr">
+        <div class="row">
+            <div class="col-lg-12 col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <h4 >Payment Details</h4>
+                            <img class="img-responsive cc-img" src="https://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label>CARD NUMBER</label>
+                                        <div class="input-group">
+                                            <input type="tel" class="form-control" placeholder="Valid Card Number" />
+                                            <span class="input-group-addon"><span class="fa fa-credit-card"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-7 col-md-7">
+                                    <div class="form-group">
+                                        <label><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                        <input type="tel" class="form-control" placeholder="MM / YY" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 col-md-5 pull-right">
+                                    <div class="form-group">
+                                        <label>CV CODE</label>
+                                        <input type="tel" class="form-control" placeholder="CVC" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label>CARD OWNER</label>
+                                        <input type="text" class="form-control" placeholder="Card Owner Names" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="btn btn-warning btn-lg btn-block process-btn">Process payment</button>
+                                <button class="btn btn-dark btn-lg btn-block process-btn mx-2">Apple Pay <i class="fa-brands fa-cc-apple-pay"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+-->
+
+<!-- Feedback Modal -->
+<!-- Error Modal -->
+<div class="modal fade submit-modal" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title" id="errorModalLabel"> Error ! </h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="errorModalBody">
+              <!-- Error messages will be inserted here -->
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Success Modal -->
+<div class="modal fade submit-modal" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title" id="successModalLabel">Success</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="successModalBody">
+              <p>تم إرسال النموذج بنجاح!</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<!--================== Footer =========================-->
+
+<div class="container-fluid text-align footer pt-5" id="footer">
+    <div class="container py-5" id="contact">
+        <div class="row g-5">
+            <div class="d-flex footer-decor">
+                <img src="/Images/footer-img.png" alt="">
+                <img src="/Images/footer-img.png" alt="">
+
+              
+            </div>
+          
+            <div class="col-lg-4 col-md-4 footer-about mb-4 mx-lg-5">
+                <h4 class=" text-white"> عن شهرزاد</h4>
+                <div class="row g-2 pt-2">
+                    <p>حيث تلتقي الفخامة بالأصالة في قلب الصحراء. استمتع بتجربة ضيافة استثنائية مستوحاة من سحر الشرق، تجمع بين الهدوء، الرفاهية، والكرم العربي الأصيل.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 links mt-5">
+                <h4 class=" text-white">روابط ســـريـعة</h4>
+                <a href="#about" class=" btn-link mb-3 ">عن شهرزاد</a>
+                <a href="#services" class=" btn-link mb-3"> خدماتـنـــا</a>
+                <a href="#packages" class=" btn-link mb-3">البــاقــات </a>
+                <a href="#partners" class=" btn-link mb-3">شركــاؤنــا</a>
+                <a href="#"  class=" btn-link mb-3">الشروط والأحكــــــام</a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 mt-5 footer-social ">
+                <h4 class=" text-white d-flex">للـــتـــواصــــــــل</h4>
+                <div class=" pt-2">
+                <div class="d-block">
+                 <p class="mb-2" style="color: white;">
+                    <i class="fa-solid fa-phone" ></i>
+                    <span>0538138177</span>
+                 </p>
+                </div>
+
+                <div>
+                    <p class="mb-2">
+                       <i class="fa-brands fa-linkedin "></i>
+                       <a href="https://www.linkedin.com/in/%D8%AF%D9%8A%D9%85%D9%87-%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%AD-158676262/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="account">Dimah Aljammah</a>
+                    </p>
+                   </div>
+                   
+                <div>
+                 <p class="mb-2">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>0538138177</span>
+                 </p>
+                </div>
+
+                <div>
+                 <p class="mb-2">
+                    <i class="fa-brands fa-twitter"></i>
+                    <a href="https://x.com/dimah_alsh" target="_blank" class="account" style="text-decoration: none;">@dimah_alsh</a>
+                 </p>
+                 </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Copy Righs -->
+        <div class="container mx-auto">
+            <div class="copyright">
+                <div class="row">
+                    <div class=" text-center py-3"> جــــمــيع الحــــقوق محفوظــــــــة لـــدى &copy; <a href="https://www.linkedin.com/in/%D8%AF%D9%8A%D9%85%D9%87-%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%AD-158676262/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">ديمة الجماح</a></div>             
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
+  
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

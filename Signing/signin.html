@@ -1,0 +1,169 @@
+<!doctype html>
+<html dir="rtl">
+<head>
+  <!-- Required meta tags and links -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Log in | تسجيل دخول</title>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="d-lg-flex half">
+  <div class="bg order-1 order-md-2"></div>
+  <div class="contents order-2 order-md-1">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7">
+          <!-- Login Form -->
+          <form id="loginForm" class="active-form" action="#" method="post">
+            <h2 class="mb-5">حيــاك الله</h2>
+            <div class="form-group first mb-3">
+              <label for="login-email">البريد الإلكتروني</label>
+              <input type="email" class="form-control" placeholder="" id="login-email" >
+            </div>
+            <div class="form-group last mb-1">
+              <label for="login-password">كلمة المرور</label>
+              <input type="password" class="form-control" placeholder="" id="login-password" >
+              <a type="button" href="../Reset-Passowrd/enter-email.html" class="btn mt-0 mb-3 forgot-pass"> نسيت كلمة المرور </a>
+
+            </div>
+            <a href="../index.html" class="btn btn-block btn-primary login-btn" >سجــل دخولــك</a>
+          </form>
+
+          <!-- Registration Form (Original Restored) -->
+          <form id="registerForm" class="inactive-form" action="#" method="post">
+            <h2 class="mb-4"> تسجيل جديد</h2>
+            <div class="form-group">
+              <input type="text" class="form-control" id="register-firstName"  placeholder="الاسم الثلاثي">
+              <div id="nameError" class="text-danger" style="display: none;">يرجى إدخال اسمك الاول  .</div>
+            </div>
+      
+
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="البريد الالكتروني" id="register-email" >
+              <div id="emailError" class="text-danger" style="display: none;">يرجى إدخال بريد إلكتروني صحيح.</div>
+            </div>
+
+            <!--<div class="form-group">
+              <select id="nationality" name="nationality" class="w-100 form-control" required>
+                <i class="fa fa-chevron-down"></i>
+                <option value="" disabled selected >الجنسية</option>
+                <option value="saudi">سعودي</option>
+                <option value="non-saudi">غير سعودي</option>
+              </select>
+              <input type="text" id="idNumber" class="w-100 form-control mt-2" placeholder="يرجى اختيار الجنسية أولاً" disabled required>       
+            </div>-->
+
+            <div class="form-group">
+              <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="رقم الجوال"  dir="rtl">
+              <div id="phoneError" class="text-danger" style="display: none;">يرجى إدخال رقم هاتف صحيح بالتنسيق الدولي.</div>
+            </div>
+
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="كلمة المرور" id="register-password" >
+              <input type="password" class="form-control mt-2" placeholder="تأكيد كلمة المرور" id="confirm-password" >
+            </div>
+            <div class="form-group">
+              <div class="form-check terms">
+                <input class="form-check-input" type="checkbox" id="agreeTerms">
+                <label class="form-check-label" for="agreeTerms">
+                  أقر بقراءة 
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal">الشروط والأحكام</a> 
+                  وأوافق عليها                </label>
+              </div>
+            </div>
+            <a href="../index.html" class="btn btn-block btn-primary reg-btn">انضم لنــا </a>
+          </form>
+        <!-- Bootstrap Alert for Error Messages -->
+        <div id="alert-box" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+          <span id="alert-message"></span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+          <!-- Toggle Button -->
+          <a type="button" id="toggleForm" class="btn mt-3">ماعنـدك حساب؟ انضم لنا</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Remove the Bootstrap alert box and replace it with a modal -->
+<div class="modal fade alert-danger" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="errorModalLabel">خطأ</h5>
+      </div>
+      <div class="modal-body">
+        <span id="modal-message"></span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-4">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">عن مشروع فندق شهرزاد</h5>
+      </div>
+      <div class="modal-body">
+        <p>
+          تم تصميم وتطوير هذا الموقع كواجهة إلكترونية تجريبية لفندق يحمل اسم "فندق شهرزاد"، وهو أحد مشاريعي كمصممة ومبرمجة واجهات أمامية (Front-End Developer).<br><br>
+          جميع عناصر التصميم مثل تنسيق الصفحات، الزخارف، توزيع المحتوى، واستخدام الألوان والخطوط تم تنفيذها بالكامل من قبلي. أما الصور والشعار فقد تم استخدامها لأغراض عرض الفكرة فقط وهي ليست من تصميمي.<br><br>
+          تم تنفيذ تصميم الموقع بطابع تراثي يعكس أجواء الضيافة العربية الأصيلة، مع التركيز على التفاصيل الجمالية المستوحاة من الهوية الثقافية، وذلك باستخدام تقنيات HTML، CSS، JavaScript، وBootstrap.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>/*
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButton = document.getElementById('toggleForm');
+  const loginForm = document.getElementById('loginForm');
+  const registerForm = document.getElementById('registerForm');
+  const container = document.querySelector('.d-lg-flex.half');
+
+  toggleButton.addEventListener('click', function () {
+    container.classList.toggle('slide');
+
+    // Toggle forms visibility
+    loginForm.classList.toggle('active-form');
+    loginForm.classList.toggle('inactive-form');
+    registerForm.classList.toggle('active-form');
+    registerForm.classList.toggle('inactive-form');
+
+    // Update toggle button text
+    if (toggleButton.textContent.includes('ماعنـدك حساب؟ انضم لنا')) {
+      toggleButton.textContent = 'عندك حساب؟ سجل دخول من هنا';
+    } else {
+      toggleButton.textContent = 'ماعنـدك حساب؟ انضم لنا';
+    }
+
+    // For smaller screens, reset any transform
+    if (window.innerWidth <= 768) {
+      container.style.transform = 'none';
+    }
+  });
+});
+*/
+</script>
+
+</body>
+</html>

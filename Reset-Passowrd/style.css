@@ -1,0 +1,66 @@
+  :root{
+    --Primary-orange:#5D3C37;
+    --blue:#5f7143;
+    --secondary-orange:#9a694d;
+    --beige:#F1E8DC;
+  }
+  body {
+    font-family: "Amiri", serif;
+    background-color: #ececec;
+    font-size: 1.8rem;
+    background: var(--beige);
+}
+   html, body {
+      overflow-x: hidden;
+  }
+
+  h3{
+    color: var(--Primary-orange);
+  }
+  h5{
+    color: grey;
+  }
+
+    .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    padding: 0 20px;
+    text-align: center;
+    background: #e7ded286;
+  }
+   .navbar-brand img {
+    height: 70px;
+  }
+   input[type="text"] {
+    max-width: 350px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus {
+    border-color: rgba(128, 128, 128, 0.519); 
+    outline: none; /* Remove the default blue outline */
+    box-shadow: 0 0 5px rgba(112, 112, 112, 0.199);
+  }
+   .send-btn {
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: var(--Primary-orange);
+    color: white;
+    padding: 0.4rem 2rem !important; 
+    border-radius: 8px;
+    font-size: 1.5rem !important;
+    transition:  0.3s }
+  .send-btn:hover {
+    background-color: var(--blue);
+  }
+  @media (max-width: 768px) {
+     .navbar{
+     padding: 0.4rem !important ;
+   }
+  }
+  

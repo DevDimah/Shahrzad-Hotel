@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي</title>
+    <!--CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+ 
+</head>
+<body >
+     <!--____________ Navbar _______________-->
+<nav>
+    <div class="navbar social-nav">
+        <div class="container-fluid d-flex justify-content-between pt-2">
+          <div class="order-lg-1 px-3 d-flex gap-2 align-items-center">
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="logo order-lg-2 d-flex align-items-center">
+            <a href="/index.html"><img src="/ramlah/Images/orange-logo.svg" alt="Logo"  ></a>
+          </div>
+          <div class="order-lg-3 px-3 pt-1 d-flex align-items-center" dir="ltr">
+            <span>+966 153 123 987</span>
+          </div>
+        </div>
+      </div>
+</nav>
+<!--_____________________________________________-->
+<div class="container mt-5 d-flex align-items-center justify-content-center flex-column">
+    <h2 class="page-title text-center fw-bold  mb-5"> الملف الشخصي</h2>
+    <div>
+        <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="active-orders-tab" data-bs-toggle="tab" href="#active-orders" role="tab" aria-controls="active-orders" aria-selected="true">الطلبات القائمة</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link " id="personal-info-tab" data-bs-toggle="tab" href="#personal-info" role="tab" aria-controls="personal-info" aria-selected="false">معلوماتي  </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="previous-orders-tab" data-bs-toggle="tab" href="#previous-orders" role="tab" aria-controls="previous-orders" aria-selected="false">الطلبات السابقة</a>
+            </li>
+        </ul>
+    </div>
+     <!-- Tab Content Wrapper -->
+     <div class="tab-content col-lg-8">
+<!--__________________________________________________________________________________________________________________________-->   
+ <!--Tap 1-->
+    <div class="tab-pane fade show active " id="active-orders" role="tabpanel" aria-labelledby="active-orders-tab">
+        <div class="row  mt-3">
+            <div class="card active-order">
+                <div class="card-body">
+                    <div class="order-card active-order" id="active-order">
+                        <h5 class=" mb-3 d-flex">طلب رقم <p class="order-number px-2">00258</p></h5>
+                        <div class="order-card-content d-flex justify-content-between align-items-start">
+                            <div class="order-info">
+                                <p><strong>الحساب باسم:</strong> <span class="order-name">صاحب الحساب</span></p>
+                                <p><strong> الطلب باسم:</strong> <span class="booking-name">صاحب الحجز</span></p>
+                                <p><strong>تاريخ الطلب:</strong> <span class="order-date">2024-09-17</span></p>
+                                <p><strong>تاريخ الوصول:</strong> <span class="arrival-date">2024-09-18</span></p>
+                                <p><strong>وقت الوصول:</strong> <span class="arrival-time">14:00</span></p>
+                                <p><strong>رقم الجوال:</strong> <span class="phone-number">0501234567</span></p>
+                                <p><strong>المجموع:</strong> <span class="total-amount">500 ريال</span></p>
+                                <p><strong>وسيلة الدفع:</strong> <span class="payment-method">بطاقة ائتمان</span></p>
+                                <p><strong>الباقة:</strong> <span class="package-name">الباقة العادية</span></p>
+                            </div>
+                            <div class="order-actions">
+                                <a href="#" class="view-order-details" data-bs-toggle="modal" data-bs-target="#detailsModal">مشاهدة التفاصيل</a>
+                                <a href="#" class="cancel-order-btn" data-bs-toggle="modal" data-bs-target="#cancelOrderModal">إلغاء الحجز</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                             
+
+    </div>
+<!--Tap 1 ends-->
+<!--__________________________________________________________________________________________________________________________-->
+<!-- Tap 2--> 
+<div class="tab-pane fade" id="personal-info" role="tabpanel" aria-labelledby="personal-info-tab">
+    <div class="row mt-3">
+      <div class="card">
+        <div class="card-title p-3">معلوماتي الشخصية</div>
+        <div class="card-body">
+          <form>
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label">الاسم الأول:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" value="الاسم الأول" readonly>
+              </div>
+            </div>
+            
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label">الاسم الأخير:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" value="الاسم الأخير" readonly>
+              </div>
+            </div>
+  
+            <div class="mb-3 row">
+              <label class="col-sm-2 col-form-label">البريد الإلكتروني:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" value="البريد الإلكتروني" readonly>
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label class="col-sm-2 col-form-label">رقم الهاتف:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" value="رقم الهاتف" readonly>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#changeNumberModal">تغيير</button>
+                </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!--Tap 2 ends-->
+                
+                <!-- Modal لتغيير البريد الإلكتروني 
+                <div class="modal fade" id="changeEmailModal" tabindex="-1" aria-labelledby="changeEmailModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="changeEmailModalLabel">تغيير البريد الإلكتروني</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="emailChangeForm">
+                                    <div class="mb-3">
+                                        <label for="newEmail" class="form-label">البريد الإلكتروني الجديد</label>
+                                        <input type="email" class="form-control" id="newEmail" placeholder="أدخل البريد الإلكتروني الجديد" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirmEmail" class="form-label">تأكيد البريد الإلكتروني</label>
+                                        <input type="email" class="form-control" id="confirmEmail" placeholder="أدخل البريد الإلكتروني مرة أخرى" required>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" onclick="validateEmailChange()">إرسال</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+                <!-- Modal للتأكيد على إرسال الرابط 
+                <div class="modal fade" id="emailSentModal" tabindex="-1" aria-labelledby="emailSentModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="emailSentModalLabel">تم إرسال الرابط</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                تم إرسال رابط التفعيل إلى بريدك الإلكتروني الجديد. يُرجى النقر على الرابط لإكمال عملية التحديث.
+                            </div>
+                            <div class="modal-footer d-flex justify-content-between">
+                                <button type="button" class="btn btn-link" onclick="resendEmail()">لم يصلني؟ أرسل مجدداً</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+          
+                <!-- Modal to Change Phone Number -->
+            <div class="modal fade" id="changeNumberModal" tabindex="-1" aria-labelledby="changeNumberModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="changeNumberModalLabel">تغيير رقم الهاتف</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="numberChangeForm">
+                                <div class="mb-3">
+                                    <label for="newNumber" class="form-label">رقم الهاتف الجديد</label>
+                                    <input type="tel" class="form-control" id="newNumber" placeholder="أدخل رقم الهاتف الجديد" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirmNumber" class="form-label">تأكيد رقم الهاتف</label>
+                                    <input type="tel" class="form-control" id="confirmNumber" placeholder="أدخل رقم الهاتف مرة أخرى" required>
+                                </div>
+                                <button type="button" class="btn btn-primary" onclick="validateNumberChange()">إرسال</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal to Confirm Email Verification -->
+            <div class="modal fade" id="confirmEmailModal" tabindex="-1" aria-labelledby="confirmEmailModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="confirmEmailModalLabel">تأكيد التغيير</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            تم إرسال رابط التفعيل إلى بريدك الإلكتروني. يُرجى النقر على الرابط لتأكيد رقم هاتفك الجديد.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--__________________________________________________________________________________________________________________________-->
+<!-- Tap 3--> 
+        <div class="tab-pane fade" id="previous-orders" role="tabpanel" aria-labelledby="previous-orders-tab">
+            <div class="row  mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="order-card previous-order" id="previous-order">
+                            <h5 class=" mb-3 d-flex">طلب رقم <p class="order-number px-2">00258</p></h5>
+                            <div class="order-card-content d-flex justify-content-between align-items-start">
+                                <div class="order-info">
+                                    <p><strong>الحساب باسم:</strong> <span class="order-name">صاحب الحساب</span></p>
+                                    <p><strong> الطلب باسم:</strong> <span class="booking-name">صاحب الحجز</span></p>
+                                    <p><strong>تاريخ الطلب:</strong> <span class="order-date">2024-09-17</span></p>
+                                    <p><strong>تاريخ الوصول:</strong> <span class="arrival-date">2024-09-18</span></p>
+                                    <p><strong>وقت الوصول:</strong> <span class="arrival-time">14:00</span></p>
+                                    <p><strong>رقم الجوال:</strong> <span class="phone-number">0501234567</span></p>
+                                    <p><strong>المجموع:</strong> <span class="total-amount">500 ريال</span></p>
+                                    <p><strong>وسيلة الدفع:</strong> <span class="payment-method">بطاقة ائتمان</span></p>
+                                    <p><strong>الباقة:</strong> <span class="package-name">الباقة العادية</span></p>
+                                </div>
+                                <div class="order-actions">
+                                    <a href="#" class="view-order-details" data-bs-toggle="modal" data-bs-target="#prevOrderdetailsModal">مشاهدة التفاصيل</a>
+                                    <a href="#" class="evaluation-btn" data-bs-toggle="modal" data-bs-target="#evaluationModal">قيم رحلتك معنا</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+<!--Tap 3 ends-->
+
+
+  
+     </div>
+</div>
+
+<!--===================   Modals   ===================================================-->
+
+  <!-- Modal for Viewing active Order Details -->
+  <div class="modal fade order-details-modal" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailsModalLabel">تفاصيل الطلب</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <strong>الاسم الأول:</strong> <span id="modalFirstName"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>الاسم الثاني:</strong> <span id="modalSecondName"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>الاسم الأخير:</strong> <span id="modalLastName"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>رقم الجوال:</strong> <span id="modalMobileNumber"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>البريد الالكتروني:</strong> <span id="modalEmail"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>رقم جوال الطوارئ:</strong> <span id="modalEmergencyContact"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>الجنسية:</strong> <span id="modalNationality"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>الهوية:</strong> <span id="modalIdDetails"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>الباقة المختارة:</strong> <span id="modalSelectedPackage"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>موعد الباقة:</strong> <span id="modalAppointmentDate"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>تاريخ الوصول:</strong> <span id="modalArrivalDate"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>وقت الوصول:</strong> <span id="modalArrivalTime"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>عدد المرافقين:</strong> <span id="modalCompanionsCount"></span>
+                </div>
+                <div class="mb-3" id="modalCompanionsDetails"></div>
+                <div class="mb-3">
+                    <strong>كود الخصم المستعمل:</strong> <span id="modalDiscountCode"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>طريقة الدفع:</strong> <span id="modalPaymentMethod"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>رقم البطاقة:</strong> <span id="modalCardNumber"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Viewing previous Order Details -->
+<div class="modal fade order-details-modal" id="prevOrderdetailsModal" tabindex="-1" aria-labelledby="prevOrderdetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="prevOrderdetailsModalLabel">تفاصيل الطلب السابق</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <strong>الاسم الأول:</strong> <span id="modalFirstName"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>الاسم الثاني:</strong> <span id="modalSecondName"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>الاسم الأخير:</strong> <span id="modalLastName"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>رقم الجوال:</strong> <span id="modalMobileNumber"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>البريد الالكتروني:</strong> <span id="modalEmail"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>رقم جوال الطوارئ:</strong> <span id="modalEmergencyContact"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>الجنسية:</strong> <span id="modalNationality"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>الهوية:</strong> <span id="modalIdDetails"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>الباقة المختارة:</strong> <span id="modalSelectedPackage"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>موعد الباقة:</strong> <span id="modalAppointmentDate"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>تاريخ الوصول:</strong> <span id="modalArrivalDate"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>وقت الوصول:</strong> <span id="modalArrivalTime"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>عدد المرافقين:</strong> <span id="modalCompanionsCount"></span>
+                </div>
+                <div class="mb-3" id="modalCompanionsDetails"></div>
+                <div class="mb-3">
+                    <strong>كود الخصم المستعمل:</strong> <span id="modalDiscountCode"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>طريقة الدفع:</strong> <span id="modalPaymentMethod"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>رقم البطاقة:</strong> <span id="modalCardNumber"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Cancel Order Modal -->
+<div class="modal fade" id="cancelOrderModal" tabindex="-1" aria-labelledby="cancelOrderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cancelOrderModalLabel">سياسة إلغاء الحجز </h5>
+            </div>
+            <div class="modal-body refund-terms">
+                <div>
+                    <strong>طريقة الغاء الطلب :</strong>
+                    <p>في حال الرغبة في إلغاء الحجز يكون ذلك عن طريق التواصل مع الرقم المخصص والظاهر في صفحة (تواصل معنا) والتأكد من إمكانية إلغاء الحجز الذي يعود للفترة الزمنية لطلب الإلغاء وحسب ما يراه المسؤول مناسب في حينها.</p>
+                </div>
+                <div>
+                    <strong>شروط استرجاع المبلغ : </strong>  
+                    <p>في حال الرغبة في تعديل تاريخ الحجز يكون ذلك عن طريق التواصل مع الرقم المخصص والظاهر في صفحة (تواصل معنا) والتأكد من إمكانية تعديل الحجز حسب توافر ذلك في حينها.</p>
+                    
+                    <p>في حال الإلغاء لا يوجد أحقية لإرجاع المبلغ كاملاً ويكون ذلك بناءً على فترة طلب الإلغاء والذي يكون كالتالي:</p>
+                     <div class="cancel-terms">
+                        <p>في حال طلب الإلغاء قبل أقل من 48 ساعة لا يحق إرجاع المبلغ نهائياً.</p>
+                        
+                        <p>في حال طلب الإلغاء أكثر من 48 ساعة وأقل من 120 ساعة يحق للعميل إرجاع 50% من المبلغ.</p>
+                        
+                        <p>في حال طلب الإلغاء أكثر من 120 ساعة يحق للعميل إرجاع 80% من المبلغ.</p>
+                     </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Order Evaluation -->
+<div class="modal fade" id="evaluationModal" tabindex="-1" aria-labelledby="evaluationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="evaluationModalLabel">رأيك يهمنــا </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="evaluationForm">
+                    <div class="mb-3">
+                        <label for="rating" class="form-label"> كيف تقيم رحلتك مع رملــة ؟</label>
+                        <select class="form-select" id="rating" required>
+                            <option value="" disabled selected> تقييمك</option>
+                            <option value="1">⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comments" class="form-label">التعليقات</label>
+                        <textarea class="form-control" id="comments" rows="4" placeholder="اكتب تعليقك هنا" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="submitEvaluation()">إرسل التقييم</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>/*
+  function validateEmailChange() {
+    const newEmail = document.getElementById('newEmail').value;
+    const confirmEmail = document.getElementById('confirmEmail').value;
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!newEmail || !confirmEmail) {
+        alert('يرجى ملء جميع الحقول.');
+        return;
+    }
+
+    if (!emailPattern.test(newEmail)) {
+        alert('يرجى إدخال بريد إلكتروني صحيح.');
+        return;
+    }
+
+    if (newEmail !== confirmEmail) {
+        alert('البريد الإلكتروني غير متطابق. يرجى التأكد من إدخال البريد نفسه.');
+        return;
+    }
+
+    const changeEmailModal = bootstrap.Modal.getInstance(document.getElementById('changeEmailModal'));
+    changeEmailModal.hide();
+
+    setTimeout(() => {
+        const emailSentModal = new bootstrap.Modal(document.getElementById('emailSentModal'));
+        emailSentModal.show();
+    }, 300); 
+}
+
+function resendEmail() {
+    alert('تم إرسال الرابط مجدداً إلى بريدك الإلكتروني الجديد');
+}
+
+function submitEvaluation() {
+    const rating = document.getElementById('rating').value;
+    const comments = document.getElementById('comments').value;
+
+    if (!rating || !comments) {
+        alert('يرجى تعبئة جميع الحقول قبل إرسال التقييم.');
+        return;
+    }
+
+    alert('شكرا تم ارسال ردك');
+
+    const evaluationModal = bootstrap.Modal.getInstance(document.getElementById('evaluationModal'));
+    evaluationModal.hide();
+
+    document.getElementById('evaluationForm').reset();
+}*/
+function validateNumberChange() {
+    const newNumber = document.getElementById('newNumber').value.trim();
+    const confirmNumber = document.getElementById('confirmNumber').value.trim();
+
+    // Pattern to check if the number contains only digits and has length between 7 and 15
+    const phonePattern = /^\d{7,15}$/;
+
+    // Check if both fields are filled
+    if (!newNumber || !confirmNumber) {
+        alert('يرجى ملء كلا الحقلين.');
+        return;
+    }
+
+    // Check if the numbers match
+    if (newNumber !== confirmNumber) {
+        alert('رقم الهاتف غير متطابق. يرجى التأكد من إدخال الرقم نفسه.');
+        return;
+    }
+
+    // Check if the number is valid
+    if (!phonePattern.test(newNumber)) {
+        alert('يرجى إدخال رقم هاتف صالح .');
+        return;
+    }
+
+    // Hide the first modal and show the confirmation modal
+    const changeNumberModal = bootstrap.Modal.getInstance(document.getElementById('changeNumberModal'));
+    changeNumberModal.hide();
+
+    const confirmEmailModal = new bootstrap.Modal(document.getElementById('confirmEmailModal'));
+    confirmEmailModal.show();
+}
+
+    </script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -244,7 +244,7 @@ header.sticky{
 */
 .hero-container{
     margin-top: -6rem !important;
-    background: url(Images/Group6.png);
+    background: url(  Images/Group6.png);
     padding: 0rem 5rem 20rem 0rem;  
     background-size: cover;
 }
@@ -398,7 +398,7 @@ header.sticky{
 .about-us-img{
     width: 190px !important;
     height: 160px;
-    background-image:url(  /Images/sh-brown-logo.png) ;
+    background-image:url(  Images/sh-brown-logo.png) ;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
@@ -628,21 +628,21 @@ header.sticky{
 
 
  /*.gallery-section .image-placeholder:nth-child(1) {
-    background-image: url('/Images  -dance.jpg');
+    background-image: url('Images  -dance.jpg');
     background-color: #993f12;
 }
 
 .gallery-section .image-placeholder:nth-child(2) {
-    background-image: url('/Images/bed.jpg');
+    background-image: url('Images/bed.jpg');
 }
 
 .gallery-section .image-placeholder:nth-child(3) {
-    background-image: url('/Images/jeremiah.jpg');
+    background-image: url('Images/jeremiah.jpg');
 }
 
 .gallery-section .image-placeholder:nth-child(4) {
-    background-image: url('/Images/felipe-pires.jpg');
-                   <img src="/Images/felipe-pires.jpg" alt="" class="img-fluid position-absolute w-100 h-100" style="object-fit: cover;">
+    background-image: url('Images/felipe-pires.jpg');
+                   <img src="Images/felipe-pires.jpg" alt="" class="img-fluid position-absolute w-100 h-100" style="object-fit: cover;">
 
 }
 */
@@ -712,7 +712,7 @@ header.sticky{
 
 
 .decor-section {
-    background-image: url(  /Images/break.png);
+    background-image: url(  Images/break.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 550px; 
@@ -786,7 +786,7 @@ header.sticky{
 }
 
 .footer .container{
-    background: url(  /Images/شهرزاد-فوتير.png);
+    background: url(  Images/شهرزاد-فوتير.png);
     background-repeat: no-repeat;
     background-size: 900px;
     background-position:bottom center;
@@ -1219,7 +1219,7 @@ section .evaluation{
         height: 50px !important;
     }
     .footer .container{
-        background: url(  /Images/شهرزاد-فوتير.png);
+        background: url(  Images/شهرزاد-فوتير.png);
         background-repeat: no-repeat;
         background-size: 450px;
         background-position: bottom ;
